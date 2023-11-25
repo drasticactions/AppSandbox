@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSandboxCatalyst", "AppSandboxCatalyst\AppSandboxCatalyst.csproj", "{936355A9-D6D9-4526-BFB1-D697C6AC5676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSandboxMaui", "AppSandboxMaui\AppSandboxMaui.csproj", "{1A67856D-3E13-47DE-A5A4-C91C95E2F4DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSandboxUIKit", "AppSandboxUIKit\AppSandboxUIKit.csproj", "{1226EBEC-C261-41E1-8A11-FC803967438A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSandboxIOS", "AppSandboxIOS\AppSandboxIOS.csproj", "{4A1FF074-A6EA-4B9A-B5D7-F1CC7232A1D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{936355A9-D6D9-4526-BFB1-D697C6AC5676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936355A9-D6D9-4526-BFB1-D697C6AC5676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936355A9-D6D9-4526-BFB1-D697C6AC5676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936355A9-D6D9-4526-BFB1-D697C6AC5676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A67856D-3E13-47DE-A5A4-C91C95E2F4DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A67856D-3E13-47DE-A5A4-C91C95E2F4DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A67856D-3E13-47DE-A5A4-C91C95E2F4DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A67856D-3E13-47DE-A5A4-C91C95E2F4DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1226EBEC-C261-41E1-8A11-FC803967438A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1226EBEC-C261-41E1-8A11-FC803967438A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1226EBEC-C261-41E1-8A11-FC803967438A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1226EBEC-C261-41E1-8A11-FC803967438A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A1FF074-A6EA-4B9A-B5D7-F1CC7232A1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A1FF074-A6EA-4B9A-B5D7-F1CC7232A1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A1FF074-A6EA-4B9A-B5D7-F1CC7232A1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A1FF074-A6EA-4B9A-B5D7-F1CC7232A1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

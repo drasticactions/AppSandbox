@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:appSandboxMaui="clr-namespace:AppSandboxMaui"
+             x:Class="AppSandboxMaui.TestCollectionViewPage">
+    <ContentPage.Content>
+        <CollectionView x:Name="TestCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <appSandboxMaui:TestView/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
