@@ -24,7 +24,7 @@ public class RootSplitViewController : UISplitViewController
             this.testViewController = new BasicViewController();
             this.testListViewController = new TestListView().ToUIViewController(this.context);
             this.testCollectionViewController = new TestCollectionViewPage().ToUIViewController(this.context);
-            this.navController = new UINavigationController(this.testViewController);
+            this.navController = new UINavigationController(this.testCollectionViewController);
             this.sidebar.OnItemSelected += this.Sidebar_OnItemSelected;
             this.PreferredDisplayMode = UISplitViewControllerDisplayMode.OneBesideSecondary;
             this.SetViewController(this.sidebar, UISplitViewControllerColumn.Primary);
@@ -37,6 +37,8 @@ public class RootSplitViewController : UISplitViewController
 
         private void Sidebar_OnItemSelected(object? sender, SidebarSelectionEventArgs e)
         {
+            this.navController.ViewControllers = null;
+            GC.Collect();
             switch (e.Item.Name)
             {
                 case "Home":
