@@ -10,6 +10,9 @@ public class RootSplitViewController : UISplitViewController
         private BasicViewController testViewController;
         private UIViewController testListViewController;
         private UIViewController testCollectionViewController;
+        private UIViewController testViewUICollectionViewController;
+        private UIViewController customTableViewController;
+        
         private UINavigationController navController;
         private MauiContext context;
         public RootSplitViewController(MauiContext context)
@@ -20,11 +23,16 @@ public class RootSplitViewController : UISplitViewController
             items.Add(new SidebarListItem() { Name = "Home" });
             items.Add(new SidebarListItem() { Name = "Maui List View" });
             items.Add(new SidebarListItem() { Name = "Maui Collection View" });
+            items.Add(new SidebarListItem() { Name = "Test View UI" });
+            items.Add(new SidebarListItem() { Name = "Custom Table View Controller" });
             this.sidebar = new SidebarViewController(items);
             this.testViewController = new BasicViewController();
             this.testListViewController = new TestListView().ToUIViewController(this.context);
             this.testCollectionViewController = new TestCollectionViewPage().ToUIViewController(this.context);
-            this.navController = new UINavigationController(this.testCollectionViewController);
+            this.testViewUICollectionViewController = new TestViewUICollectionViewController(this.context);
+            this.customTableViewController = new CustomTableViewController();
+            this.navController = new UINavigationController(this.testViewController);
+            
             this.sidebar.OnItemSelected += this.Sidebar_OnItemSelected;
             this.PreferredDisplayMode = UISplitViewControllerDisplayMode.OneBesideSecondary;
             this.SetViewController(this.sidebar, UISplitViewControllerColumn.Primary);
@@ -51,6 +59,14 @@ public class RootSplitViewController : UISplitViewController
                     break;
                 case "Maui Collection View":
                     this.navController.ViewControllers = new UIViewController[1] { this.testCollectionViewController };
+                    this.navController.PopToRootViewController(false);
+                    break;
+                case "Test View UI":
+                    this.navController.ViewControllers = new UIViewController[1] { this.testViewUICollectionViewController };
+                    this.navController.PopToRootViewController(false);
+                    break;
+                case "Custom Table View Controller":
+                    this.navController.ViewControllers = new UIViewController[1] { this.customTableViewController };
                     this.navController.PopToRootViewController(false);
                     break;
             }

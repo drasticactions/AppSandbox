@@ -12,4 +12,9 @@ public partial class TestView : ContentView
     {
         InitializeComponent();
     }
+    
+    public void UpdateText(string text)
+    {
+        this.TestLabel.Text = text;
+    }
 }
