@@ -12,6 +12,7 @@ public class RootSplitViewController : UISplitViewController
         private UIViewController testCollectionViewController;
         private UIViewController testViewUICollectionViewController;
         private UIViewController customTableViewController;
+        private UIViewController imageTableViewController;
         
         private UINavigationController navController;
         private MauiContext context;
@@ -25,11 +26,13 @@ public class RootSplitViewController : UISplitViewController
             items.Add(new SidebarListItem() { Name = "Maui Collection View" });
             items.Add(new SidebarListItem() { Name = "Test View UI" });
             items.Add(new SidebarListItem() { Name = "Custom Table View Controller" });
+            items.Add(new SidebarListItem() { Name = "Image Table View Controller" });
             this.sidebar = new SidebarViewController(items);
             this.testViewController = new BasicViewController();
             this.testListViewController = new TestListView().ToUIViewController(this.context);
             this.testCollectionViewController = new TestCollectionViewPage().ToUIViewController(this.context);
             this.testViewUICollectionViewController = new TestViewUICollectionViewController(this.context);
+            this.imageTableViewController = new ImageTableViewController(this.context);
             this.customTableViewController = new CustomTableViewController();
             this.navController = new UINavigationController(this.testViewController);
             
@@ -67,6 +70,10 @@ public class RootSplitViewController : UISplitViewController
                     break;
                 case "Custom Table View Controller":
                     this.navController.ViewControllers = new UIViewController[1] { this.customTableViewController };
+                    this.navController.PopToRootViewController(false);
+                    break;
+                case "Image Table View Controller":
+                    this.navController.ViewControllers = new UIViewController[1] { this.imageTableViewController };
                     this.navController.PopToRootViewController(false);
                     break;
             }
